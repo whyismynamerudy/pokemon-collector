@@ -43,13 +43,15 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use('/api/users', userRouter);
 app.use('/api/login', loginRouter);
 
+app.get('/', (request, response) => {
+    response.send('<p>yo</p>');
+})
+
 app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
   });
 
-// app.get('/', (request, response) => {
-//     response.send('<p>yo</p>');
-// })
+
 
 app.use(middleware.errorHandler); //this error handler needs to go at the end
 
