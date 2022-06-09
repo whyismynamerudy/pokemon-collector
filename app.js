@@ -21,12 +21,12 @@ app.use(cors());
 app.use(express.json()); //this is what allows backend to recieve json
 app.use(express.static(path.join(__dirname, 'build')));
 
+app.use('/api/users', userRouter);
+app.use('/api/login', loginRouter);
+
 app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
   });
-
-app.use('/api/users', userRouter);
-app.use('/api/login', loginRouter);
 
 // app.get('/', (request, response) => {
 //     response.send('<p>yo</p>');
