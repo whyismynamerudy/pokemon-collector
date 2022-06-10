@@ -9,7 +9,7 @@ const userRouter = require('./controllers/users');
 const loginRouter = require('./controllers/login');
 const middleware = require('./utils/middleware');
 
-mongoose.connect(config.MONGODB_URL)
+mongoose.connect(config.MONGODB_URL, {useNewUrlParser:true, useUnifiedTopology: true})
     .then(() => {
         console.log("connected to db");
     })
