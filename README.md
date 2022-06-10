@@ -1,4 +1,4 @@
-[# Pokemon Collector](https://pokemon-collector-wimnr.herokuapp.com/)
+# [Pokemon Collector](https://pokemon-collector-wimnr.herokuapp.com/)
 
 This is a full-stack app developed using MongoDB, Express.js, React.js, and Node.js (the **MERN** stack). The app can be accessed via the hyperlinked title or using the link below: 
 
